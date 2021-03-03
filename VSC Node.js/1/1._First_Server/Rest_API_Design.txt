@@ -1,0 +1,19 @@
+Rest API Design of a shopping mall.
+
+1. Create project and join database. (I will use txt file in my implementation).
+
+2. Create app.js controller class.
+    2.1. Import exprexx (trough terminal: nmp install express).
+    2.2. Assign port which app.js will listen to.
+    2.3. Create Get request mothod, which will map to index page.
+    
+3. Create user/product module(Model).
+    3.1. Create schema.
+    3.2. Attach schema to module.
+
+4. Create CRUD methods for users and for products.
+    4.1. Create method which will add new user/product(POST).
+    4.2. Read method to print all users/products in db/table(GET).
+    4.3. Find user/product by id(GET).
+    4.4. Update user/product by id. Update specific user/product(PUT/PATCH).
+    4.5. Delete by id(DELETE).
