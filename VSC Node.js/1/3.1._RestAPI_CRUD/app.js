@@ -28,18 +28,18 @@ let products = [
     }
 ]
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { //Frontpage
     res.send('Le Frontpage');
 });
 
-app.get("/ProductList", (req, res) => {
+app.get("/ProductList", (req, res) => { //Prints list of products
     const product = products.map((product) => {
         return product
     });
     res.send(product);
 });
 
-app.get("/ProductByID/:id", (req, res) => {
+app.get("/ProductByID/:id", (req, res) => { //Takes id.parameter from URL and print product from list by id
     let prodID = req.params.id;
     let item = products.find(item => item.id == prodID);
     if(item){
@@ -48,7 +48,7 @@ app.get("/ProductByID/:id", (req, res) => {
     res.send("Item not found!");
 });
 
-app.post("/CreateProduct/:id/:name/:price", (req, res) => {
+app.post("/CreateProduct/:id/:name/:price", (req, res) => { //Takes parameters from URL, create and add new product to list
     let prodID = req.params.id;
     let prodName = req.params.name;
     let prodPrice = req.params.price;
@@ -58,7 +58,7 @@ app.post("/CreateProduct/:id/:name/:price", (req, res) => {
     res.send("Your item was successfully added to the Product List!");
 });
 
-app.delete("/DeleteProduct/:id", (req, res) => {
+app.delete("/DeleteProduct/:id", (req, res) => { // Takes id from URL and deletes by id
     let prodID = req.params.id;
     let item = products.find(item => item.id == prodID);
     let del = products.indexOf(item);
@@ -69,7 +69,7 @@ app.delete("/DeleteProduct/:id", (req, res) => {
     res.send("Item not found!");
 });
 
-app.put("/UpdateProduct/:id/:name/:price", (req, res) => {
+app.put("/UpdateProduct/:id/:name/:price", (req, res) => { //Update product by id
     let prodID = req.params.id;
     let item = products.find(item => item.id == prodID);
     let upd = products.indexOf(item);
