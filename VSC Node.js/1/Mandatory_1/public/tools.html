@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+    <!-- Background -->
+<div class="w3-container w3-black">
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large w3-black" style="margin-left: 340px;">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+    <a href="/tools" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Tools</a>
+    <a href="/language" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Language</a>
+    <a href="/simpleAPI" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Simple CRUD API</a>
+    <a href="/terminal" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Git and Terminal</a>
+  </div>
+</div>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+        <h3 class="w3-padding-64" style="margin-top: -60px;"><b>Documentation<br>Node.js</b></h3>
+    </div>
+    <div class="w3-bar-block">
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Home</a> 
+        <a href="#nodejs" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Node.js</a> 
+        <a href="#vsc" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Visual Studio Code</a> 
+        <a href="#express" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Express</a> 
+        <a href="#json" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">JSON</a> 
+        <a href="#nodemon" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Nodemon</a>
+        <a href="#postman" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Postman</a>
+    </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Documentation Node.js</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-dark-grey" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:40px" id="nodejs">
+        <h1 class="w3-jumbo"><b>Tools</b></h1>
+        <h1 class="w3-xxxlarge w3-text-red"><b>Node.js</b></h1>
+        <p>Node.js is an open source, cross-platform runtime environment for developing server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, and Linux.
+          <br>
+          Node.js also provides a rich library of various JavaScript modules which simplifies the development of web applications using Node.js to a great extent.</p>
+    </div>
+
+    <!-- VSC -->
+    <div class="w3-container" id="vsc" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Visual Studio Code</b></h1>
+        <p>Visual Studio Code is a source-code editor that can be used with a variety of programming languages, including Java, JavaScript, Go, Node. js, Python and C++. It is based on the Electron framework, which is used to develop Node. js Web applications that run on the Blink layout engine.</p>
+    </div>
+
+    <!-- Express -->
+    <div class="w3-container" id="express" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Express</b></h1>
+        <p>Express.js is a free and open-source web application framework for Node.js. It is used for designing and building web applications quickly and easily. Since Express.js only requires javascript, it becomes easier for programmers and developers to build web applications and API.<p>
+        <p>Express.js is a framework of Node.js which means that most of the code is already written for programmers to work with. You can build a single page, multi-page, or hybrid web applications using Express.js. Express.js is lightweight and helps to organize web applications on the server-side into a more organized MVC architecture.</p>
+    </div>
+    
+    <!-- JSON -->
+    <div class="w3-container" id="json" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>JSON</b></h1>
+        <p>JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications.</p>
+        
+    </div>
+
+    <!-- Nodemon -->
+    <div class="w3-container" id="nodemon" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Nodemon</b></h1>
+        <p>Nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.</p>
+    </div>
+
+    <!-- Postman -->
+    <div class="w3-container" id="postman" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Postman</b></h1>
+      <p>Postman is a software development tool. It enables people to test calls to APIs. Postman users enter data. The data is sent to a special web server address. Typically, information is returned, which Postman presents to the user.</p>
+  </div>
+
+    <!-- End page content -->
+    </div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

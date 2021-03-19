@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+code {
+    font-weight: bold;
+    font-size: large;
+    color: rgb(238, 82, 34);
+}
+</style>
+<body>
+    <!-- Background -->
+<div class="w3-container w3-black">
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large w3-black" style="margin-left: 340px;">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+    <a href="/tools" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Tools</a>
+    <a href="/language" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Language</a>
+    <a href="/simpleAPI" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Simple CRUD API</a>
+    <a href="/terminal" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Git and Terminal</a>
+  </div>
+</div>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+        <h3 class="w3-padding-64" style="margin-top: -60px;"><b>Documentation<br>Node.js</b></h3>
+    </div>
+    <div class="w3-bar-block">
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Home</a> 
+        <a href="#types" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Types</a> 
+        <a href="#hoisting" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Hoisting</a> 
+        <a href="#functions" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Functions</a> 
+        <a href="#json" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">JSON Objects</a> 
+        <a href="#list" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">List</a>
+        <a href="#loops" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Loops</a>
+        <a href="#files" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Files</a>
+        <a href="#envalue" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Environment value</a>
+        <a href="#package" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Package.json</a>
+    </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Documentation Node.js</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-dark-grey" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:40px" id="types">
+        <h1 class="w3-jumbo"><b>Tools</b></h1>
+        <h1 class="w3-xxxlarge w3-text-red"><b>Types</b></h1>
+        <p>- <code>var</code> declarations are globally scoped or function scoped while <code>let</code> and <code>const</code> are block scoped.</p>
+        <p> - <code>var</code> variables can be updated and re-declared within its scope; <code>let</code> variables can be updated but not re-declared; <code>const</code> variables can neither be updated nor re-declared.</p>
+        <p> - They are all hoisted to the top of their scope. But while <code>var</code> variables are initialized with undefined, <code>let</code> and <code>const</code> variables are not initialized.</p>
+        <p> - While <code>var</code> and <code>let</code> can be declared without being initialized, <code>const</code> must be initialized during declaration.</p>
+        <br>
+        <p>You can find more about types on this page: https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/</p>
+    </div>
+
+    <!-- Hoisting -->
+    <div class="w3-container" id="hoisting" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Hoisting</b></h1>
+        <p>Hoisting is JavaScript's default behavior of moving declarations to the top.</p>
+        <p>In JavaScript, a variable can be declared after it has been used.</p>
+        <p>In other words; a variable can be used before it has been declared.</p>
+        <p>Example of hoisted function:</p>
+        <img src="/images/language/hoist1.jpg">
+        <p>Example of not hoistet function:</p>
+        <img src="/images/language/hoist2.jpg">
+    </div>
+
+    <!-- Functions -->
+    <div class="w3-container" id="functions" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Functions</b></h1>
+        <p>Functions:</p>
+        <img src="/images/language/hoist2.jpg">
+        <p>Arrow Function:</p>
+        <img src="/images/language/arrow.jpg">
+        <p>Callback fuction:</p>
+        <img src="/images/language/callback1.jpg">
+        <p>Another example of callback function:</p>
+        <img src="/images/language/callback2.jpg">
+    </div>
+    
+    <!-- JSON -->
+    <div class="w3-container" id="json" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>JSON Objects</b></h1>
+        <p>JSON objects are surrounded by curly braces and are written in key/value pairs.</p>
+        <p>Keys must be strings separated by colon from values, which has to bevalid JSON data type(string, number, object, array boolean or null).</p>
+        <p>Each key/value must be separated by comma.</p>
+        <p>Here is example of JSON object and how to acces its value:</p>
+        <img src="/images/language/json2.jpg">
+        <p>Nested JSON object</p>
+        <img src="/images/language/json3.jpg">
+        <p>Modify value of JSON object</p>
+        <img src="/images/language/json4.jpg">
+
+    </div>
+
+    <!-- List -->
+    <div class="w3-container" id="list" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>List</b></h1>
+        <p>List</p>
+    </div>
+
+    <!-- Loops -->
+    <div class="w3-container" id="loops" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Loops</b></h1>
+      <p>Filte()</p>
+      <p>Find()</p>
+      <p>Map()</p>
+    </div>
+
+    <!-- Files -->
+    <div class="w3-container" id="files" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Files</b></h1>
+        <p>To be able to work with files on your computer you need to tell the application to use "File System":</p>
+        <img src="/images/language/fs.jpg">
+        <p>Then use "fs.readFile() to read file:</p>
+        <img src="/images/language/readfile.jpg">
+      </div>
+
+      <!-- Environment variable -->
+    <div class="w3-container" id="envalue" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Environment value</b></h1>
+      <p>Environment variables are the way to configure diffrerent aspects of Node.js applications. That can be for example env.Port.</p>
+      <img src="/images/language/envPort.jpg">
+      <p>While hosting your application on another service ((environments) like Heroku, aws etc.), your host may independently configure the "process.env.PORT" 
+        variable.</p>
+    </div>
+
+     <!-- Dependencies and scripts -->
+     <div class="w3-container" id="package" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Package.json</b></h1>
+      <p>Package.json is grat thing to make it easier for others to maage and install your package.
+        It contains a list of the packages(Dependencies) your project depends on, specifies versions 
+        of packages and makes your build reproducible, and therfore easier to share with other developers.
+      </p>
+      <p>Dependencies and scripts are JSON objects containing nested JSON object as value.</p>
+      <img src="/images/simpleAPI/package.jpg">
+      <p> </p>
+    </div>
+
+    <!-- End page content -->
+    </div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

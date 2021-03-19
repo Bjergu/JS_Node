@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+    <!-- Background -->
+<div class="w3-container w3-black">
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large w3-black" style="margin-left: 340px;">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+    <a href="/tools" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Tools</a>
+    <a href="/language" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Language</a>
+    <a href="/simpleAPI" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Simple CRUD API</a>
+    <a href="/terminal" class="w3-bar-item w3-button w3-hide-small w3-hover-dark-grey">Git and Terminal</a>
+  </div>
+</div>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+        <h3 class="w3-padding-64" style="margin-top: -60px;"><b>Documentation<br>Node.js</b></h3>
+    </div>
+    <div class="w3-bar-block">
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Home</a> 
+        <a href="#intro" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Intro</a> 
+        <a href="#start" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Getting started</a> 
+        <a href="#list" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">List</a> 
+        <a href="#get" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">GET</a> 
+        <a href="#getid" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">GET by ID</a>
+        <a href="#post" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">POST</a>
+        <a href="#patch" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">PATCH</a>
+        <a href="#delete" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">DELETE</a>
+    </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <span>Documentation Node.js</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main w3-dark-grey" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:40px" id="intro">
+        <h1 class="w3-jumbo"><b>Simple CRUD API</b></h1>
+        <h1 class="w3-xxxlarge w3-text-red"><b>CRUD API</b></h1>
+        <p>This example will show how to make a siple CRUD API.</p>
+        <p></p>
+    </div>    
+
+    <!-- Getting started -->
+    <div class="w3-container" style="margin-top:40px" id="start">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Getting started</b></h1>
+        <p>In project folder create file called "package.json". This is the folder where all dependecies, scripts etc. will be found.</p>
+        <p>We will need <b>express framework</b> for this projekt. Therfore we need to make a dependency for express. In <b>package.json</b>
+             make an JSON object wtih <b>"dependecies"</b> as key and another JSON object as value. In the secont JSON object enter <b>"express"</b> 
+             as key and the newest verion as value.(should be auto-entered after typing <b>"express"</b>)</p>
+        <img src="/images/simpleAPI/package.jpg">
+        <p>Now it is time to install express.</p>
+        <p>Open terminal and make sure to enter projekt folder. Then enter <b>"npm install"</b>. After finnish, console should look like this.</p>
+        <img src="/images/simpleAPI/npm_install.jpg">
+        <p>Make sure that packages was installed succesfully by looking at project folder. If two new follders like on the pictures apeared, 
+            the installation was succesfull.</p>
+        <img src="/images/simpleAPI/npm_install_folder.jpg">
+
+        <p>Now it is time to create app.js file.</p>
+        <p>First thing that needs to be done is to tell to the application to use express. That can be done by making a request like on this image:</p>
+        <img src="/images/simpleAPI/app_1.jpg">
+        <p>Next step is to tell the app, which port should it listen to, It can be siply done by entering this:</p>
+        <img src="/images/simpleAPI/app_2.jpg">
+        <p>To make it more readable and accesable it is preffered to do like this:</p>
+        <img src="/images/simpleAPI/app_3.jpg">
+        <p><b>"app.listen"</b> should be always put at the end of the file. That will make it easier to find both for you or other programmers.</p>
+
+        <p>Now it is time to make first get method:</p>
+        <img src="/images/simpleAPI/app_4.jpg">
+        <p>Now when you enter "http://localhost:8080/" you will find an empty JSON object.</p>
+
+        <p>To get HTML file as response you will need to enter <b>sendFile(__dirname + "path")</b>.</p>
+        <img src="/images/simpleAPI/app_5.jpg">
+
+        <p>And befor we start with CRUD methods we will make use of:</p>
+        <img src="/images/simpleAPI/app_6.jpg">
+        <p><b>"express.json"</b> is a body parser that will recognize the incoming JSON object. It will be needed to make POST and PUT/PATCH requests.</p>
+
+    </div>
+
+<!-- Storage -->
+<div class="w3-container" style="margin-top:40px" id="list">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Database/List</b></h1>
+    <p>As database we will use a List as database. So lets start with creating and populating of the new list.</p>
+    <img src="/images/simpleAPI/CRUD/list.jpg">
+</div>
+
+<!-- Get -->
+<div class="w3-container" style="margin-top:40px" id="get">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Get</b></h1>
+    <p>Time to make a GET request which will show the list of Wines.</p>
+    <img src="/images/simpleAPI/CRUD/get.jpg">
+    <a href="/wines">Click to get list of Wines</a>
+</div>
+
+<!-- GetById -->
+<div class="w3-container" style="margin-top:40px" id="getid">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Get by id</b></h1>
+    <p>And now lets get one wine by id.</p>
+    <img src="/images/simpleAPI/CRUD/getid.jpg">
+    <a href="/wines/2">Click to get wine with id: 2</a>
+    <p><b>"req.params.id"</b> takes ":id" from URL as parameter and use it to find object witch matching id.</p>
+</div>
+
+<!-- Post -->
+<div class="w3-container" style="margin-top:40px" id="post">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Post</b></h1>
+    <p>The next step is to create a new object in wines list.</p>
+    <p>To avoid manual changing of id which could be problematic asspecialy in bigger applications declare "AUTOINCREMENT".</p>
+    <img src="/images/simpleAPI/CRUD/increment.jpg">
+    <p>And now to Get method.</p>
+    <img src="/images/simpleAPI/CRUD/create.jpg">
+    <p><b>"req.body"</b> holds parameters that are sent up from the client as part of a POST request.</p>
+    <p>To test this, use postman which will allow you to make a simple HTTP request.</p>
+    <img style="width:100%" src="/images/simpleAPI/CRUD/postman.jpg">
+    <p>Result:</p>
+    <img style="width:100%" src="/images/simpleAPI/CRUD/postman2.jpg">
+</div>
+
+<!-- Patch -->
+<div class="w3-container" style="margin-top:40px" id="patch">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Patch</b></h1>
+    <p>Time for some changes. And thats where we are going to use PATCH method.</p>
+    <img src="/images/simpleAPI/CRUD/upd.jpg">
+    
+</div>
+
+<!-- Delete -->
+<div class="w3-container" style="margin-top:40px" id="delete">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Delete</b></h1>
+    <p>And finnaly DELETE method.</p>
+    <img src="/images/simpleAPI/CRUD/del.jpg">
+</div>
+
+    <!-- End page content -->
+    <br>
+    </div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

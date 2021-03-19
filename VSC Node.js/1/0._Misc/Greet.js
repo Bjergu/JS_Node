@@ -33,7 +33,7 @@ const sayHi = () => {
 
 const saySomething = () => {
     console.log("Something");
-};
+};n
 
 sayHiLater(sayHi);
 sayHiLater(saySomething);

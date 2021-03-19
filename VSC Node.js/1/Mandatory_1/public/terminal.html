@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Home</title>
+<title>Git</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -10,6 +10,11 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
+code {
+    font-weight: bold;
+    font-size: large;
+    color: rgb(238, 82, 34);
+}
 </style>
 <body>
     <!-- Background -->
@@ -33,8 +38,8 @@ body {font-size:16px;}
     </div>
     <div class="w3-bar-block">
         <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Home</a> 
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">About</a> 
-        <a href="#topics" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Topics</a> 
+        <a href="#gitcommands" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Git commands</a> 
+        <a href="#terminalcommands" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-dark-grey">Terminal commands</a> 
     </div>
     </nav>
 
@@ -51,27 +56,29 @@ body {font-size:16px;}
     <div class="w3-main w3-dark-grey" style="margin-left:340px;margin-right:40px">
 
     <!-- Header -->
-    <div class="w3-container" style="margin-top:40px" id="about">
-        <h1 class="w3-jumbo"><b>Home</b></h1>
-        <h1 class="w3-xxxlarge w3-text-red"><b>About</b></h1>
-        <p>Welcome to my documentation page about Node.js course!</p>
-        <p>On this page i will cover most of the topics i learned on Node.js elective course. This page is a kind of begginer- 
-            and pocket- guide which will make it easier to jump right back in Node.js in the future.
-        </p>
+    <div class="w3-container" style="margin-top:40px" id="git">
+        <h1 class="w3-jumbo"><b>Git and Terminal</b></h1>
+        <h1 class="w3-xxxlarge w3-text-red"><b>Git commands</b></h1>
+        <p><code>git clone "URL"</code> - Clone git repository and saves it on your desktop.</p>
+        <p><code>git add .</code> - Adds changes in the working directory to the ataging area. It tells Git that you want to include updates to a particular 
+          file in the next commit. You can write "git add (file)"" or "git add (.)" to include all changes.</p>
+        <p><code>git commit -m "first commit"</code> - Commits let you make changelog of incoming and old pushes.</p>
+        <p><code>git push -u origin main</code> - execute all added changes included in commit.</p>
     </div>
 
-    <!-- Topics -->
-    <div class="w3-container" id="topics" style="margin-top:75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>What topics will be covered?</b></h1>
-        <p>- Tools<br>&emsp;Here, it will be listed which tools i used at the course.</p>
-        <p>- Language<br>&emsp;Will cover some basic coding in JavaScript. Snippets of methods and function i used on the course.</p>
-        <p>- Simple CRUD API<br>&emsp;There will be explainet step by step how to create a simple CRUD Rest API from the scratch.</p>
-        <p>- Git and Terminal<br>&emsp;About use of Git and list of usefull terminal cammands.</p>
+    <!-- Terminal commands -->
+    <div class="w3-container" id="terminalcommands" style="margin-top:75px">
+        <h1 class="w3-xxxlarge w3-text-red"><b>Terminal commands</b></h1>
+        <p><code>npm install</code> - installing modules included in package.json in project directory.</p> 	
+        <p><code>npm install express</code> - installing express framework.</p>
+        <p><code>npm install -g nodemon</code> - installing nodemon globally for all projects on your pc.</p>
+        <p><code>npm install --save-dev nodemon</code> - installing nodemon for current projekt.</p>
+        <p><code>nodemon file</code> - runs nodemon.</p>
     </div>
-    
+
     <!-- End page content -->
     </div>
-    
+
 <script>
 // Script to open and close sidebar
 function w3_open() {
